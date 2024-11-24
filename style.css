@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Dela+Gothic+One&family=Gabarito:wght@600&family=Lato&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Croissant One', serif;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+}
+
+.cont {
+    height: 38vw;
+    width: 25vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: #87C4FF;
+}
+
+.rotor {
+    position: absolute;
+    transform-origin: 50% 48%;
+    top: 120%;
+    left: 40%;
+    height: 70vw;
+    width: 70vw;
+    margin-top: -26vw;
+    margin-left: -26vw;
+    border-radius: 45%;
+    background-color: white;
+    opacity: 0.3;
+    animation: spin 5s linear infinite;
+
+}
+
+.r2 {
+    animation: spin 9s linear infinite;
+}
+
+.r3 {
+    animation: spin 13s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.weathericon {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    transition: all 0.5s ease;
+    animation: float 2s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.fa-sun {
+    color: yellow;
+}
+
+.fa-cloud {
+    color: rgb(231, 231, 231);
+}
+
+.details {
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+.details .city {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 900;
+    z-index: 3;
+}
+
+.details .city i {
+    color: red;
+}
+
+.date-time {
+    text-align: center;
+    color: rgb(78, 78, 78);
+    font-size: 1.3vw;
+    margin-top: 2vw;
+    font-weight: 500;
+}
+
+.tempDiv {
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tempDiv img {
+    height: 4vw;
+    width: 4vw;
+}
+
+@media (max-width: 600px) {
+    .cont {
+        height: 100vw;
+        width: 70vw;
+    }
+
+    .rotor {
+        height: 160vw;
+        width: 160vw;
+        margin-top: -66vw;
+        margin-left: -56vw;
+    }
+    .details .city {
+        font-size: 7vw;
+    }
+    .date-time {
+        font-size: 3vw;
+    }
+    .tempDiv {
+        font-size: 5vw;
+    }
+    .tempDiv img {
+        height: 12vw;
+        width: 12vw;
+    }
+    .weathericon {
+        font-size: 19vw;
+    }
+}
