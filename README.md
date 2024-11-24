@@ -1,3 +1,2 @@
 # WeatherApp
-WeatherApp using HTML, CSS , Jav Script
-Weather temperature checker of your location
+WeatherApp using HTML, CSS , JavaScript.
